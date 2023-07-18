@@ -31,10 +31,8 @@ class AuthResult(object):
         'token': 'str',
         'refresh_token': 'str',
         'expires_in': 'float',
-        'expires_in': 'float',
         'id': 'str',
         'name': 'str',
-        'date_logged_in': 'datetime',
         'date_logged_in': 'datetime'
     }
 
@@ -42,22 +40,18 @@ class AuthResult(object):
         'token': 'token',
         'refresh_token': 'refreshToken',
         'expires_in': 'expiresIn',
-        'expires_in': 'expires_in',
         'id': 'id',
         'name': 'name',
-        'date_logged_in': 'dateLoggedIn',
-        'date_logged_in': 'date_logged_in'
+        'date_logged_in': 'dateLoggedIn'
     }
 
-    def __init__(self, token=None, refresh_token=None, expires_in=None, expires_in=None, id=None, name=None, date_logged_in=None, date_logged_in=None):  # noqa: E501
+    def __init__(self, token=None, refresh_token=None, expires_in=None, id=None, name=None, date_logged_in=None):  # noqa: E501
         """AuthResult - a model defined in Swagger"""  # noqa: E501
         self._token = None
         self._refresh_token = None
         self._expires_in = None
-        self._expires_in = None
         self._id = None
         self._name = None
-        self._date_logged_in = None
         self._date_logged_in = None
         self.discriminator = None
         if token is not None:
@@ -66,14 +60,10 @@ class AuthResult(object):
             self.refresh_token = refresh_token
         if expires_in is not None:
             self.expires_in = expires_in
-        if expires_in is not None:
-            self.expires_in = expires_in
         if id is not None:
             self.id = id
         if name is not None:
             self.name = name
-        if date_logged_in is not None:
-            self.date_logged_in = date_logged_in
         if date_logged_in is not None:
             self.date_logged_in = date_logged_in
 
@@ -141,27 +131,6 @@ class AuthResult(object):
         self._expires_in = expires_in
 
     @property
-    def expires_in(self):
-        """Gets the expires_in of this AuthResult.  # noqa: E501
-
-
-        :return: The expires_in of this AuthResult.  # noqa: E501
-        :rtype: float
-        """
-        return self._expires_in
-
-    @expires_in.setter
-    def expires_in(self, expires_in):
-        """Sets the expires_in of this AuthResult.
-
-
-        :param expires_in: The expires_in of this AuthResult.  # noqa: E501
-        :type: float
-        """
-
-        self._expires_in = expires_in
-
-    @property
     def id(self):
         """Gets the id of this AuthResult.  # noqa: E501
 
@@ -202,27 +171,6 @@ class AuthResult(object):
         """
 
         self._name = name
-
-    @property
-    def date_logged_in(self):
-        """Gets the date_logged_in of this AuthResult.  # noqa: E501
-
-
-        :return: The date_logged_in of this AuthResult.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._date_logged_in
-
-    @date_logged_in.setter
-    def date_logged_in(self, date_logged_in):
-        """Sets the date_logged_in of this AuthResult.
-
-
-        :param date_logged_in: The date_logged_in of this AuthResult.  # noqa: E501
-        :type: datetime
-        """
-
-        self._date_logged_in = date_logged_in
 
     @property
     def date_logged_in(self):
